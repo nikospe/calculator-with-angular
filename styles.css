@@ -1,0 +1,58 @@
+body {
+    background-color: #e9ebee;
+    padding: 15px;
+    margin: 15px;
+}
+
+#title {
+    color: chocolate;
+    text-align: center;
+}
+
+#calc {
+    text-align: center;
+    border: 1px solid black;
+    width: 350px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+#display {
+    text-align: right;
+    margin-right: 15px;
+    padding: 10px;
+    font-size: -webkit-xxx-large;
+    overflow-x: overlay;
+}
+
+#numbers {
+    margin-top: 3px;
+}
+
+#actions {
+
+}
+
+.nums {
+    width: 70px;
+    height: 55px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    padding: 3px;
+}
+
+.symbols {
+    width: 70px;
+    height: 55px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    padding: 3px;
+}
+
+#clear {
+    width: 70px;
+    height: 55px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+    padding: 3px;
+}

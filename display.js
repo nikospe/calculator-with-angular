@@ -4,5 +4,5 @@ app.component('display', {
         secondNum: '<',
         act: '<'
     },
-    template: `<div id="screen">{{$ctrl.firstNum}}{{$ctrl.act}}{{$ctrl.secondNum}}</div>`
+    template: `<div id="display">{{$ctrl.firstNum}}{{$ctrl.act}}{{$ctrl.secondNum}}</div>`
 });

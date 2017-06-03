@@ -49,7 +49,7 @@ class CalculatorCtrl {
                     this.subtraction();
                     break;
                 case '*' :
-                    this.divison();                            
+                    this.poliferation();                            
                     break;
                 case '/' :
                     if ( this.secondNum == 0 ) {
@@ -93,8 +93,8 @@ class CalculatorCtrl {
 
 app.component('calculator', {
   template: `<div id="calc">
-    <display first-num="$ctrl.firstNum" act="$ctrl.act" second-num="$ctrl.secondNum"></display>
-    <keypad on-click="$ctrl.keyPressed"></keypad>
-  </div>`,
+        <display first-num="$ctrl.firstNum" act="$ctrl.act" second-num="$ctrl.secondNum"></display>
+        <keypad on-click="$ctrl.keyPressed"></keypad>
+    </div>`,
   controller: CalculatorCtrl
 });

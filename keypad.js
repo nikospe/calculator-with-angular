@@ -8,13 +8,13 @@ app.component('keypad', {
     bindings: {
         onClick: '<'
     },
-    template: `<div>
+    template: `<div id="numbers">
         <button 
             class = "nums" 
             ng-repeat = "number in [0,1,2,3,4,5,6,7,8,9]" 
             ng-click = "$ctrl.buttonClick(number)">
             {{number}}
-        </buttons>
+        </buttons></div><div id="actions">
         <button
             class = "symbols"
             ng-repeat = 'symbol in ["+","-","*","/","="]'
@@ -24,6 +24,6 @@ app.component('keypad', {
         <button
             id = "clear"
             ng-click = '$ctrl.buttonClick("clear")'>
-        ce</button>`,
+        ce</button></div>`,
      controller: KeypadCtrl
 });
