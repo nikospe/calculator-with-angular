@@ -7,8 +7,8 @@ class CalculatorCtrl {
 
     clear() {
         this.value = 0;
-        this.number1 = undefined;
-        this.number2 = undefined;
+        this.firstNum = undefined;
+        this.secondNum = undefined;
         this.result = undefined;
         this.act = '';
     }
@@ -47,16 +47,20 @@ class CalculatorCtrl {
 
 app.component('calculator', {
   template: `<div id="calc">
-    <touchScreen ng-bind = "$ctrl.value"></touchScreen>
+    <display value="$ctrl.value"></display>
     <br>
     <keypad on-click="$ctrl.keyPressed"></keypad>
   </div>`,
   controller: CalculatorCtrl
 });
 
-app.component('touchScreen', {
+app.component('display', {
     bindings: {
         value: '<',
+        number1: '<',
+        number2: '<',
+        act: '<',
+        result: '<'
     },
     template: '<div id="display">{{$ctrl.value}}</div>'
 });
