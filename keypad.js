@@ -20,13 +20,14 @@ app.component('keypad', {
             <button
                 class = "keys symbols"
                 ng-repeat = 'symbol in ["+","-","*","/","="]'
+                ng-class='{"result": symbol=="="}'
                 ng-click = "$ctrl.buttonClick(symbol)">
                 {{symbol}}
             </button>
             <button
                 id = "clear" class="keys"
                 ng-click = '$ctrl.buttonClick("clear")'>
-            ce</button>
+            c</button>
         </div>`,
      controller: KeypadCtrl
 });

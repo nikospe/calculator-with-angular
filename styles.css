@@ -12,8 +12,10 @@ body {
 #calc {
     text-align: center;
     outline: 1px solid lightslategrey;
+    outline-style: double;
     box-shadow: 0px 0px 6px #000000;    
     width: 350px;
+    height: 455px;
     margin: 0 auto;
     padding: 5px;
 }
@@ -22,19 +24,26 @@ body {
     text-align: right;
     margin-right: 15px;
     padding: 10px;
-    font-size: -webkit-xxx-large;
+    font-size: xx-large;
     overflow-x: overlay;
 }
 
 #numbers {
     margin-top: 5px;
     margin-right: 5px;
+    width: 275px;
+}
+
+#actions {
+    float: right;
+    width: 105px;
+    margin-top: -380px;
 }
 
 .keys {
     background-color: transparent;
-    outline: 1px solid lightsalmon;
-    font-size: larger;
+    outline: 1px solid lavender;
+    font-size: xx-large;
     width: 80px;
     height: 95px;
     padding: 3px;
@@ -46,4 +55,13 @@ body {
 
 #clear {
     color: lightskyblue;
+    float: inherit;
+    margin-top: -95px;
+    margin-right: 92px;
+}
+
+.result {
+    margin-right: 252px;
+    margin-top: -95px;
+    float: inherit;
 }
