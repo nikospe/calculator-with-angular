@@ -1,8 +1,24 @@
 var app = angular.module('myApp', []);
 
 class CalculatorCtrl {
-    constructor() {
+    constructor( $http, $scope ) {
+        this.$http = $http;
+        this.$scope = $scope;
         this.keyPressed = this.keyPressed.bind(this);
+        this.fetchRates($scope);
+    }
+
+    fetchRates ($scope) {
+        this.$http.get('http://api.fixer.io/latest?base=EUR').then( (response) => {
+            $scope.rates = Object.keys(response.data.rates);
+            $scope.currencies = response.data.rates;
+        });
+        this.$http.get('http://api.fixer.io/latest?base=USD').then( (response) => {
+            $scope.usdCurrencies = response.data.rates;
+        });
+        this.$http.get('http://api.fixer.io/latest?base=GBP').then( (response) => {
+            $scope.gbpCurrencies = response.data.rates;
+        });
     }
 
     clear() {
@@ -52,7 +68,7 @@ class CalculatorCtrl {
                     this.poliferation();                            
                     break;
                 case '/' :
-                    if ( this.secondNum == 0 ) {
+                    if ( this.secondNum === 0 ) {
                         this.clear();
                     } else {
                         this.division();                                
@@ -74,10 +90,25 @@ class CalculatorCtrl {
                 }
             } else {
                 this.firstNum = (this.firstNum * 10) + value; }
-        } else if (value == 'clear') {
+        } else if (value === 'clear') {
             this.clear();
+        } else if ( value === "convert" ) {
+            var sourceCurrency = document.querySelector("#source").value;
+            var targetCurrency = document.querySelector("#target").value;
+            if ( sourceCurrency === targetCurrency ) {
+                return;
+            }
+            if ( sourceCurrency.length > 0 && targetCurrency.length > 0 ) {
+                if ( sourceCurrency === "EUR" ) {
+                    this.firstNum = this.firstNum * this.$scope.currencies[targetCurrency];
+                } else if ( sourceCurrency === "USD" ){
+                    this.firstNum = this.firstNum * this.$scope.usdCurrencies[targetCurrency];
+                } else {
+                    this.firstNum = this.firstNum * this.$scope.gbpCurrencies[targetCurrency];
+                }
+            }
         } else {
-            if ( value == '=' ) {
+            if ( value === '=' ) {
                 this.result();
             } else {
                 if ( this.act.length == 0 ) {
@@ -93,8 +124,8 @@ class CalculatorCtrl {
 
 app.component('calculator', {
   template: `<div id="calc">
-        <display first-num="$ctrl.firstNum" act="$ctrl.act" second-num="$ctrl.secondNum"></display>
-        <keypad on-click="$ctrl.keyPressed"></keypad>
+        <display first-num="$ctrl.firstNum" act="$ctrl.act" second-num="$ctrl.secondNum"></display>        
+        <keypad on-click="$ctrl.keyPressed" rates="rates"></keypad>
     </div>`,
-  controller: CalculatorCtrl
+  controller: ['$http', '$scope', CalculatorCtrl]
 });

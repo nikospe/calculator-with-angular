@@ -15,7 +15,7 @@ body {
     outline-style: double;
     box-shadow: 0px 0px 6px #000000;    
     width: 350px;
-    height: 455px;
+    height: auto;
     margin: 0 auto;
     padding: 5px;
 }
@@ -38,6 +38,13 @@ body {
     float: right;
     width: 105px;
     margin-top: -380px;
+}
+
+#convert {
+    width: 319px;
+    font-size: large;
+    margin-right: -5px;
+    display: inline-flex;
 }
 
 .keys {
@@ -64,4 +71,21 @@ body {
     margin-right: 252px;
     margin-top: -95px;
     float: inherit;
+}
+
+.my-input {
+    width: 90px;
+}
+
+#convert-selector {
+    border: 2px solid lightgray;
+    width: 236px;
+    height: 91px;
+    text-align: center;
+    font-size: 25px;
+}
+
+#convert-button {
+    display: inline;
+    font-size: large;
 }
