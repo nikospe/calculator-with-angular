@@ -40,7 +40,6 @@ app.component('keypad', {
                     ng-repeat = 'value in ["EUR","USD","GBP"]'                    
                     value="{{value}}">{{value}}</option>             
                 </select>
-
                 <span>to:</span>
                 <!--<input list="currencies" class="my-input" id="target">-->
                 <select class="my-input" id="target">
