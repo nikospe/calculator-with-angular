@@ -29,7 +29,7 @@ app.component('keypad', {
             <button
                 id = "clear" class="keys"
                 ng-click = '$ctrl.buttonClick("clear")'>
-            c</button>
+            C</button>
         </div>
         <div id="convert">
             <div id="convert-selector">
