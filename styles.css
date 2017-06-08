@@ -1,110 +1,12 @@
-/*body {
-    background-color: #e9ebee;
-    padding: 15px;
-    margin: 15px;
-}
-
-@media (min-width: 600px) {
-    #calc {
-        width: 100%
-    }
-}
-
-#title {
-    color: chocolate;
-    text-align: center;
-}
-
-#calc {
-    text-align: center;
-    outline: 1px solid lightslategrey;
-    outline-style: double;
-    box-shadow: 0px 0px 6px #000000;    
-    width: 350px;
-    height: auto;
-    margin: 0 auto;
-    padding: 5px;
-}
-
-#display {
-    text-align: right;
-    margin-right: 15px;
-    padding: 10px;
-    font-size: xx-large;
-    overflow-x: overlay;
-}
-
-#numbers {
-    margin-top: 5px;
-    margin-right: 5px;
-    width: 275px;
-}
-
-#actions {
-    float: right;
-    width: 105px;
-    margin-top: -380px;
-}
-
-#convert {
-    width: 319px;
-    font-size: large;
-    margin-right: -5px;
-    display: inline-flex;
-}
-
-.keys {
-    background-color: transparent;
-    outline: 1px solid lavender;
-    font-size: xx-large;
-    width: 80px;
-    height: 95px;
-    padding: 3px;
-}
-
-.symbols {
-    color: chocolate;
-}
-
-#clear {
-    color: lightskyblue;
-    float: inherit;
-    margin-top: -95px;
-    margin-right: 92px;
-}
-
-.result {
-    margin-right: 252px;
-    margin-top: -95px;
-    float: inherit;
-}
-
-.my-input {
-    width: 90px;
-}
-
-#convert-selector {
-    border: 2px solid lightgray;
-    width: 236px;
-    height: 91px;
-    text-align: center;
-    font-size: 25px;
-}
-
-#convert-button {
-    display: inline;
-    font-size: large;
-}*/
 body {
     background-color: #e9ebee;
+    font-family: 'Orbitron';
 }
 
 #calc {
-    background-color: #dbdde0;
+    background-color: rgba(211, 221, 227, 0.3);
     width: 350px;
     margin: 0 auto;
-    outline: 1px solid lightslategrey;
-    outline-style: double;
     box-shadow: 0px 0px 6px #000000;
 }
 
@@ -126,23 +28,23 @@ body {
 
 #display {
     text-align: right;
-    margin-right: 15px;
     padding: 10px;
     font-size: x-large;
     overflow-x: overlay;
+    box-shadow: inset 0px 0px 5px 1px rgba(105,100,105,1);
 }
 
 .keys {
-    background-color: transparent;
-    outline: 1px solid lavender;
-    font-size: xx-large;
+    background-color: white;
+    outline: 0;
+    font-size: 25px;
     width: 33.3333%;
     height: 60px;
 }
 
 #convert-button {
     color: red;
-    font-size: large;
+    font-size: inherit;
     width: 25%;
     height: 40px;
     float: right;
@@ -181,5 +83,5 @@ body {
 }
 
 #text {
-    font-size: 14px;
+    font-size: 17px;
 }

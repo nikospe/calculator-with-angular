@@ -33,7 +33,7 @@ app.component('keypad', {
         </div>
         <div id="convert">
             <div id="convert-selector">
-                <span id="text">Convert value from:</span>
+                <span id="text">From:</span>
                 <!--<input list="to-currencies" class="my-input" id="source">-->
                 <select class="my-input" id="source">
                     <option 
