@@ -13,22 +13,19 @@ app.component('keypad', {
             <button 
                 class = "keys" 
                 ng-repeat = "number in [1,2,3,4,5,6,7,8,9,0]"                 
-                ng-click = "$ctrl.buttonClick(number)">
+                ng-click = "$ctrl.buttonClick(number)"
+                ng-class = '{"zero": number===0}'>
                 {{number}}
             </buttons>
         </div>
         <div id="actions">
             <button
                 class = "keys symbols"
-                ng-repeat = 'symbol in ["+","-","*","/","="]'
+                ng-repeat = 'symbol in ["=","+","-","*","/"]'
                 ng-class='{"result": symbol=="="}'
                 ng-click = "$ctrl.buttonClick(symbol)">
                 {{symbol}}
-            </button>
-            <button
-                id = "clear" class="keys"
-                ng-click = '$ctrl.buttonClick("clear")'>
-            c</button>   
+            </button>   
             <button
                 id = "clear" class="keys"
                 ng-click = '$ctrl.buttonClick("clear")'>
@@ -36,7 +33,7 @@ app.component('keypad', {
         </div>
         <div id="convert">
             <div id="convert-selector">
-                <span>Convert value from:</span>
+                <span id="text">Convert value from:</span>
                 <!--<input list="to-currencies" class="my-input" id="source">-->
                 <select class="my-input" id="source">
                     <option 

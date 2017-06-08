@@ -1,7 +1,13 @@
-body {
+/*body {
     background-color: #e9ebee;
     padding: 15px;
     margin: 15px;
+}
+
+@media (min-width: 600px) {
+    #calc {
+        width: 100%
+    }
 }
 
 #title {
@@ -88,4 +94,92 @@ body {
 #convert-button {
     display: inline;
     font-size: large;
+}*/
+body {
+    background-color: #e9ebee;
+}
+
+#calc {
+    background-color: #dbdde0;
+    width: 350px;
+    margin: 0 auto;
+    outline: 1px solid lightslategrey;
+    outline-style: double;
+    box-shadow: 0px 0px 6px #000000;
+}
+
+#title {
+    width: 350px;
+    margin: 0 auto;
+    color: chocolate;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    #calc {
+        width: 95%;
+    }
+    #title {
+        width: 90%;
+    }
+}
+
+#display {
+    text-align: right;
+    margin-right: 15px;
+    padding: 10px;
+    font-size: x-large;
+    overflow-x: overlay;
+}
+
+.keys {
+    background-color: transparent;
+    outline: 1px solid lavender;
+    font-size: xx-large;
+    width: 33.3333%;
+    height: 60px;
+}
+
+#convert-button {
+    color: red;
+    font-size: large;
+    width: 25%;
+    height: 40px;
+    float: right;
+}
+
+#clear {
+    color: lightskyblue;
+    float: left;
+    margin-top: -120px;
+}
+
+.symbols {
+    color: chocolate;
+    width: 25%;
+}
+
+.zero {
+    float: left;
+    margin-left: 33.3333%;
+}
+
+.result {
+    color: green;
+    width: 33.3333%;
+}
+
+#convert {
+    overflow: auto;
+}
+
+#convert-selector {
+    width: 75%;
+    margin: 0;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#text {
+    font-size: 14px;
 }
